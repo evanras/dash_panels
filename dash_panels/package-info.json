@@ -1,6 +1,6 @@
 {
   "name": "dash_panels",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Resizable panels inspired by react-resizable-panels.",
   "repository": {
     "type": "git",
