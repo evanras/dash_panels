@@ -1,0 +1,11 @@
+include dash_panels/dash_panels.min.js
+include dash_panels/dash_panels.min.js.map
+include dash_panels/async-*.js
+include dash_panels/async-*.js.map
+include dash_panels/*-shared.js
+include dash_panels/*-shared.js.map
+include dash_panels/metadata.json
+include dash_panels/package-info.json
+include README.md
+include LICENSE
+include package.json
