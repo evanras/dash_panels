@@ -6,6 +6,8 @@ const resources_path = realpath(joinpath( @__DIR__, "..", "deps"))
 const version = "0.0.1"
 
 include("jl/panel.jl")
+include("jl/panelgroup.jl")
+include("jl/panelresizehandle.jl")
 
 function __init__()
     DashBase.register_package(

@@ -2,7 +2,7 @@
   "name": "dash_panels",
   "version": "0.0.1",
   "description": "Resizable panels inspired by Rreact-resizable-panels.",
-"repository": {
+  "repository": {
     "type": "git",
     "url": "git://github.com/evanras/dash-panels.git"
   },
@@ -37,7 +37,7 @@
     "babel-loader": "^9.1.2",
     "copyfiles": "^2.1.1",
     "css-loader": "^6.8.1",
-    "eslint": "^6.0.1",
+    "eslint": "^9.36.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-react": "^7.14.2",
@@ -45,11 +45,12 @@
     "react": "^16.8.6",
     "react-docgen": "^5.4.3",
     "react-dom": "^16.8.6",
+    "react-resizable-panels": "^3.0.6",
     "style-loader": "^3.3.3",
-    "styled-jsx": "^3.2.1",
+    "styled-jsx": "^5.1.7",
     "webpack": "^5.84.1",
     "webpack-cli": "^5.1.1",
-    "webpack-dev-server": "^4.15.0"
+    "webpack-dev-server": "^5.2.2"
   },
   "engines": {
     "node": ">=8.11.0",

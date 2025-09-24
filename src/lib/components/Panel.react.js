@@ -1,37 +1,13 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Panel as ReactPanel } from 'react-resizable-panels';
 
-/**
- * ExampleComponent is an example component.
- * It takes a property, `label`, and
- * displays it.
- * It renders an input with the property `value`
- * which is editable by the user.
- */
 const Panel = (props) => {
-    const {id, label, setProps, value} = props;
-
-    const handleInputChange = (e) => {
-        /*
-        * Send the new value to the parent component.
-        * setProps is a prop that is automatically supplied
-        * by dash's front-end ("dash-renderer").
-        * In a Dash app, this will update the component's
-        * props and send the data back to the Python Dash
-        * app server if a callback uses the modified prop as
-        * Input or State.
-        */
-        setProps({ value: e.target.value });
-    };
+    const { children, setProps, ...other } = props;
 
     return (
-        <div id={id}>
-            ExampleComponent: {label}&nbsp;
-            <input
-                value={value}
-                onChange={handleInputChange}
-            />
-        </div>
+        <ReactPanel {...other}>
+            {children}
+        </ReactPanel>
     );
 }
 
@@ -44,20 +20,74 @@ Panel.propTypes = {
     id: PropTypes.string,
 
     /**
-     * A label that will be printed when this component is rendered.
+     * The children of this component.
      */
-    label: PropTypes.string.isRequired,
+    children: PropTypes.node,
 
     /**
-     * The value displayed in the input.
+     * Update the component's props.
      */
-    value: PropTypes.string,
+    setProps: PropTypes.func,
 
     /**
-     * Dash-assigned callback that should be called to report property changes
-     * to Dash, to make them available for callbacks.
-     */
-    setProps: PropTypes.func
+     * The class name for the panel group used for styling
+    */
+    className: PropTypes.string,
+
+    /**
+     * Panel should collapse to this size (in pixesl)
+    */
+    collapsedSizePixels: PropTypes.number,
+
+    /**
+     * Panel should collapse to this size (in percentage)
+    */
+    collapsedSizePercentage: PropTypes.number,
+
+    /**
+     * Whether Panel should collapse when resized beyond its minSize
+    */
+    collapsible: PropTypes.bool,
+
+    /**
+     * Initial size of panel (in pixels)
+    */
+    defaultSizePixels: PropTypes.number,
+
+    /**
+     * Initial size of panel (in percentage)
+    */
+    defaultSizePercentage: PropTypes.number,
+
+    /**
+     * Minimum size of panel (in pixels)
+    */
+    minSizePixels: PropTypes.number,
+
+    /**
+     * Minimum size of panel (in percentage)
+    */
+    minSizePercentage: PropTypes.number,
+
+    /**
+     * Maximum size of panel (in pixels)
+    */
+    maxSizePixels: PropTypes.number,
+
+    /**
+     * Maximum size of panel (in percentage)
+    */
+    maxSizePercentage: PropTypes.number,
+
+    /**
+     * Order of panel within group; required for groups with conditionally rendered panels
+    */
+    order: PropTypes.number,
+
+    /**
+     * style for the panel group
+    */
+    style: PropTypes.object,
 };
 
 export default Panel;

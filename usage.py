@@ -1,22 +1,63 @@
-import dash_panels
-from dash import Dash, callback, html, Input, Output
+from dash_panels import PanelGroup, Panel, PanelResizeHandle
+from dash import Dash, html
 
 app = Dash(__name__)
 
-app.layout = html.Div([
-    dash_panels.Panel(
-        id='input',
-        value='my-value',
-        label='my-label'
-    ),
-    html.Div(id='output')
-])
+handle_styles = {
+    "background-color": "red",
+    "width": "3px",
+    "height": "100%",
+}
+vertical_handle_styles = {
+    "background-color": "red",
+    "height": "3px",
+    "width": "100%",
+}
+
+app.layout = html.Div(
+    style={"height": "100vh"},
+    children=[
+        PanelGroup(
+            id="panel-group",
+            children=[
+                Panel(
+                    id="panel-1",
+                    children=[html.Div("Panel 1")],
+                    defaultSizePercentage=20,
+                    minSizePercentage=15,
+                    collapsible=True,
+                ),
+                PanelResizeHandle(html.Div(style=handle_styles)),
+                Panel(
+                    id="panel-2",
+                    children=[
+                        PanelGroup(
+                            id="panel-group-2",
+                            children=[
+                                Panel(id="panel-2-1", children=["Panel 2-1"]),
+                                PanelResizeHandle(
+                                    html.Div(style=vertical_handle_styles)
+                                ),
+                                Panel(id="panel-2-2", children=[html.Div("Panel 2-2")]),
+                            ],
+                            direction="vertical",
+                        )
+                    ],
+                    minSizePercentage=50,
+                ),
+                PanelResizeHandle(html.Div(style=handle_styles)),
+                Panel(
+                    id="panel-3",
+                    children=[html.Div("Panel 3")],
+                    defaultSizePercentage=20,
+                    minSizePercentage=10,
+                ),
+            ],
+            direction="horizontal",
+        )
+    ],
+)
 
 
-@callback(Output('output', 'children'), Input('input', 'value'))
-def display_output(value):
-    return 'You have entered {}'.format(value)
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)

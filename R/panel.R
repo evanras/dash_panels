@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-panel <- function(id=NULL, label=NULL, value=NULL) {
+panel <- function(children=NULL, id=NULL, className=NULL, collapsedSizePercentage=NULL, collapsedSizePixels=NULL, collapsible=NULL, defaultSizePercentage=NULL, defaultSizePixels=NULL, maxSizePercentage=NULL, maxSizePixels=NULL, minSizePercentage=NULL, minSizePixels=NULL, order=NULL, style=NULL) {
     
-    props <- list(id=id, label=label, value=value)
+    props <- list(children=children, id=id, className=className, collapsedSizePercentage=collapsedSizePercentage, collapsedSizePixels=collapsedSizePixels, collapsible=collapsible, defaultSizePercentage=defaultSizePercentage, defaultSizePixels=defaultSizePixels, maxSizePercentage=maxSizePercentage, maxSizePixels=maxSizePixels, minSizePercentage=minSizePercentage, minSizePixels=minSizePixels, order=order, style=style)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ panel <- function(id=NULL, label=NULL, value=NULL) {
         props = props,
         type = 'Panel',
         namespace = 'dash_panels',
-        propNames = c('id', 'label', 'value'),
+        propNames = c('children', 'id', 'className', 'collapsedSizePercentage', 'collapsedSizePixels', 'collapsible', 'defaultSizePercentage', 'defaultSizePixels', 'maxSizePercentage', 'maxSizePixels', 'minSizePercentage', 'minSizePixels', 'order', 'style'),
         package = 'dashPanels'
         )
 
