@@ -1,7 +1,7 @@
 Package: dashPanels
-Title: Resizable panels inspired by Rreact-resizable-panels.
+Title: Resizable panels inspired by react-resizable-panels.
 Version: 0.0.1
-Description: Resizable panels inspired by Rreact-resizable-panels.
+Description: Resizable panels inspired by react-resizable-panels.
 Depends: R (>= 3.0.2)
 Imports: 
 Suggests: 

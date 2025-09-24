@@ -10,12 +10,9 @@
 }
 
 \usage{
-panel(children=NULL, id=NULL, className=NULL,
-collapsedSizePercentage=NULL, collapsedSizePixels=NULL,
-collapsible=NULL, defaultSizePercentage=NULL,
-defaultSizePixels=NULL, maxSizePercentage=NULL,
-maxSizePixels=NULL, minSizePercentage=NULL,
-minSizePixels=NULL, order=NULL, style=NULL)
+panel(children=NULL, id=NULL, className=NULL, collapsedSize=NULL,
+collapsible=NULL, defaultSize=NULL, maxSize=NULL,
+minSize=NULL, order=NULL, style=NULL)
 }
 
 \arguments{
@@ -25,23 +22,15 @@ minSizePixels=NULL, order=NULL, style=NULL)
 
 \item{className}{Character. The class name for the panel group used for styling}
 
-\item{collapsedSizePercentage}{Numeric. Panel should collapse to this size (in percentage)}
-
-\item{collapsedSizePixels}{Numeric. Panel should collapse to this size (in pixesl)}
+\item{collapsedSize}{Numeric. Panel should collapse to this size (in percentage or pixels)}
 
 \item{collapsible}{Logical. Whether Panel should collapse when resized beyond its minSize}
 
-\item{defaultSizePercentage}{Numeric. Initial size of panel (in percentage)}
+\item{defaultSize}{Numeric. Initial size of panel (in percentage)}
 
-\item{defaultSizePixels}{Numeric. Initial size of panel (in pixels)}
+\item{maxSize}{Numeric. Maximum size of panel (in percentage)}
 
-\item{maxSizePercentage}{Numeric. Maximum size of panel (in percentage)}
-
-\item{maxSizePixels}{Numeric. Maximum size of panel (in pixels)}
-
-\item{minSizePercentage}{Numeric. Minimum size of panel (in percentage)}
-
-\item{minSizePixels}{Numeric. Minimum size of panel (in pixels)}
+\item{minSize}{Numeric. Minimum size of panel (in percentage)}
 
 \item{order}{Numeric. Order of panel within group; required for groups with conditionally rendered panels}
 

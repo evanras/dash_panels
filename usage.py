@@ -23,8 +23,8 @@ app.layout = html.Div(
                 Panel(
                     id="panel-1",
                     children=[html.Div("Panel 1")],
-                    defaultSizePercentage=20,
-                    minSizePercentage=15,
+                    defaultSize=45,
+                    minSize=15,
                     collapsible=True,
                 ),
                 PanelResizeHandle(html.Div(style=handle_styles)),
@@ -43,14 +43,14 @@ app.layout = html.Div(
                             direction="vertical",
                         )
                     ],
-                    minSizePercentage=50,
+                    minSize=50,
                 ),
                 PanelResizeHandle(html.Div(style=handle_styles)),
                 Panel(
                     id="panel-3",
                     children=[html.Div("Panel 3")],
-                    defaultSizePercentage=20,
-                    minSizePercentage=10,
+                    defaultSize=20,
+                    minSize=10,
                 ),
             ],
             direction="horizontal",
