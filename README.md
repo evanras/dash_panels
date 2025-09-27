@@ -10,7 +10,7 @@ The resizable panels are inspired by and built utilizing the
 These components allow Dash developers to configure groups of resizable components.
 
 #### Demo
-
+https://github.com/user-attachments/assets/31aee190-c5e0-43ad-9e37-93a4d4cdbbfd
 
 #### Usage
 ```python
@@ -84,7 +84,7 @@ if __name__ == "__main__":
 The ResizableModal component is a highly customizable component that can be resized as well as dragged around. 
 
 #### Demo
-
+https://github.com/user-attachments/assets/79a1d46d-0a02-4840-ba29-aa66aa3d7090
 
 #### Usage
 ```python
@@ -104,11 +104,9 @@ resizable_modal_layout = html.Div(
             isOpen=False,
             backdrop=True,
             showCloseButton=True,
-            rightOffset=50,   # 50px from right edge
-            bottomOffset=100,  # 100px from bottom edge
             resizeCorner="bottom-right",
             children=[
-                "Hello, this is test content! I can included tons of text in here. "
+                "Lorem."
             ]
         )
     ]
