@@ -6,12 +6,12 @@ app = Dash(__name__)
 # region Panels: PanelGroup, Panel, PanelResizeHandle
 
 handle_styles = {
-    "background-color": "red",
+    "background-color": "blue",
     "width": "3px",
     "height": "100%",
 }
 vertical_handle_styles = {
-    "background-color": "red",
+    "background-color": "blue",
     "height": "3px",
     "width": "100%",
 }
@@ -65,35 +65,20 @@ panel_layout = html.Div(
 
 # region ResizableModal
 resizable_modal_layout = html.Div(
-    # style={"margin-left": "20em", "margin-top": "30em"},
     children=[
         html.H1("ResizableModal Example"),
         html.P("Click below to see ResizableModal."),
         html.Button(id="open-modal", children="Open Modal"),
         ResizableModal(
             id="test-modal",
-            title="Test Modal",
+            title="Resizable Modal",
             isOpen=False,
             backdrop=True,
-            # Use html.I instead of HTML string
-            # customResizeIcon=html.I(className="fi fi-ts-arrow-up-right-and-arrow-down"),
             showCloseButton=True,
             rightOffset=50,   # 50px from right edge
-            bottomOffset=100,
+            bottomOffset=100,  # 100px from bottom edge
             resizeCorner="bottom-right",
             children=[
-                "Hello, this is test content! I can included tons of text in here. "
-                "Hello, this is test content! I can included tons of text in here. "
-                "Hello, this is test content! I can included tons of text in here. "
-                "Hello, this is test content! I can included tons of text in here. "
-                "Hello, this is test content! I can included tons of text in here. "
-                "Hello, this is test content! I can included tons of text in here. "
-                "Hello, this is test content! I can included tons of text in here. "
-                "Hello, this is test content! I can included tons of text in here. "
-                "Hello, this is test content! I can included tons of text in here. "
-                "Hello, this is test content! I can included tons of text in here. "
-                "Hello, this is test content! I can included tons of text in here. "
-                "Hello, this is test content! I can included tons of text in here. "
                 "Hello, this is test content! I can included tons of text in here. "
             ]
         )
@@ -112,7 +97,5 @@ def open_modal(n_clicks):
 
 
 if __name__ == "__main__":
-    app.layout = resizable_modal_layout  # or resizable_modal_layout
-
-
-    app.run(debug=True)
+    app.layout = panel_layout  # panel_layout or resizable_modal_layout
+    app.run(debug=False)
