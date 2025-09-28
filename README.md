@@ -2,6 +2,11 @@
 
 Dash Panels is a Dash component library that offers a handful of resizable components. 
 
+## Installation
+```python
+pip install dash-panels
+```
+
 ## Components
 
 ### Panels
