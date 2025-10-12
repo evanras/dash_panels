@@ -10,7 +10,7 @@
 }
 
 \usage{
-panelResizeHandle(children=NULL, id=NULL, className=NULL, disable=NULL,
+panelResizeHandle(children=NULL, id=NULL, className=NULL, disabled=NULL,
 style=NULL)
 }
 
@@ -21,7 +21,7 @@ style=NULL)
 
 \item{className}{Character. The class name for the panel group for styling}
 
-\item{disable}{Logical. Disable drag handle}
+\item{disabled}{Logical. Disable drag handle}
 
 \item{style}{Named list. Additional style for the panel group}
 }

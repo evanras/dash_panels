@@ -14,11 +14,11 @@ Keyword arguments:
 - `children` (a list of or a singular dash component, string or number; optional): The children of this component.
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
 - `className` (String; optional): The class name for the panel group for styling
-- `disable` (Bool; optional): Disable drag handle
+- `disabled` (Bool; optional): Disable drag handle
 - `style` (Dict; optional): Additional style for the panel group
 """
 function panelresizehandle(; kwargs...)
-        available_props = Symbol[:children, :id, :className, :disable, :style]
+        available_props = Symbol[:children, :id, :className, :disabled, :style]
         wild_props = Symbol[]
         return Component("panelresizehandle", "PanelResizeHandle", "dash_panels", available_props, wild_props; kwargs...)
 end

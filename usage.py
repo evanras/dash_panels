@@ -38,7 +38,7 @@ panel_layout = html.Div(
                             children=[
                                 Panel(id="panel-2-1", children=["Panel 2-1"]),
                                 PanelResizeHandle(
-                                    html.Div(style=vertical_handle_styles)
+                                    children=[html.Div(style=vertical_handle_styles)]
                                 ),
                                 Panel(id="panel-2-2", children=[html.Div("Panel 2-2")]),
                             ],
