@@ -33,7 +33,7 @@ Keyword arguments:
 - className (string; optional):
     The class name for the panel group for styling.
 
-- disable (boolean; optional):
+- disabled (boolean; optional):
     Disable drag handle."""
     _children_props = []
     _base_nodes = ['children']
@@ -46,13 +46,13 @@ Keyword arguments:
         children: typing.Optional[ComponentType] = None,
         id: typing.Optional[typing.Union[str, dict]] = None,
         className: typing.Optional[str] = None,
-        disable: typing.Optional[bool] = None,
+        disabled: typing.Optional[bool] = None,
         style: typing.Optional[typing.Any] = None,
         **kwargs
     ):
-        self._prop_names = ['children', 'id', 'className', 'disable', 'style']
+        self._prop_names = ['children', 'id', 'className', 'disabled', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'className', 'disable', 'style']
+        self.available_properties = ['children', 'id', 'className', 'disabled', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

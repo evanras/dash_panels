@@ -37,7 +37,7 @@ PanelResizeHandle.propTypes = {
     /**
      * Disable drag handle
     */
-    disable: PropTypes.bool,
+    disabled: PropTypes.bool,
 
     /**
      * Additional style for the panel group
