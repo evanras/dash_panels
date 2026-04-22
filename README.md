@@ -2,6 +2,8 @@
 
 Dash Panels is a Dash component library that offers a handful of resizable components. 
 
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/dash-panels?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/dash-panels)
+
 ## Installation
 ```python
 pip install dash-panels
